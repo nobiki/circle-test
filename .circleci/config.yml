@@ -1,0 +1,16 @@
+version: 2
+
+jobs:
+  hello_world_job:
+    docker:
+      - image: circleci/python:3.6.5-stretch
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: execute hello world
+          command: |
+            echo 'hello world'
